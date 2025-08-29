@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoatVision</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="upload-section">
+        <h1>Upload Your Picture</h1>
+        <p>Drag and drop a file or click to select a file</p>
+        <input type="file" id="file-input" hidden accept="image/*" />
+        <div class="upload-area" id="upload-area">
+          <div id="image-preview-container" style="display: none">
+            <img id="image-preview" src="" alt="Image Preview" />
+          </div>
+          <p>Click here to upload</p>
+        </div>
+      </div>
+      <div id="image-display-section" style="display: none">
+        <h2>Annotated Image</h2>
+        <img id="annotated-image" src="" alt="Annotated Image" />
+        <button id="new-upload-button">Upload Another Image</button>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>
