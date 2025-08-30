@@ -10,9 +10,12 @@
     />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-brand">BoatVision</div>
+    </nav>
     <div class="container">
       <div class="upload-section">
-        <h1>Upload Your Picture</h1>
+        <h1>Upload Your Picture or Video</h1>
         <p>Drag and drop a file or click to select a file</p>
         <input type="file" id="file-input" hidden accept="image/*" />
         <div class="upload-area" id="upload-area">
@@ -22,7 +25,7 @@
           <p>Click here to upload</p>
         </div>
       </div>
-      <div id="image-display-section" style="display: none">
+      <div id="image-display-section">
         <h2>Annotated Image</h2>
         <img id="annotated-image" src="" alt="Annotated Image" />
         <button id="new-upload-button">Upload Another Image</button>

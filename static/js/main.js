@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     reader.readAsDataURL(file);
 
-    uploadArea.querySelector("p").textContent = "Processing...";
+    uploadArea.querySelector("p").textContent = "Click here to upload";
     const formData = new FormData();
     formData.append("file", file);
 
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         if (data.annotated_image) {
           annotatedImage.src = data.annotated_image;
-          imageDisplaySection.style.display = "block";
+          imageDisplaySection.style.display = "flex";
           uploadSection.style.display = "none"; // Hide upload section
         } else {
           alert(data.error || "An error occurred.");
