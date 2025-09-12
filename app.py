@@ -11,7 +11,6 @@ app = Flask(__name__)
 
 # Load the custom YOLOv11 model
 model = YOLO('models/best.onnx') # local model
-# model = YOLO('yolov8n.pt')  # pretrained model
 
 # Configure upload folder and allowed extensions
 UPLOAD_FOLDER = 'uploads'
